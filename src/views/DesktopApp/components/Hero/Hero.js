@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import Typed from "react-typed";
 
 const Hero = () => {
   const theme = useTheme();
@@ -24,7 +25,9 @@ const Hero = () => {
               color="text.primary"
               sx={{ fontWeight: 700 }}
             >
-              Beautiful data representation{' '}
+              Building Tool
+              <br/>
+              For {' '}
               <Typography
                 color={'primary'}
                 component={'span'}
@@ -36,22 +39,20 @@ const Hero = () => {
                   )} 0%)`,
                 }}
               >
-                built with theFront
+                <Typed
+                    strings={['Stacks']}
+                    typeSpeed={150}
+                    loop={true}
+                />
               </Typography>
-            </Typography>
-          </Box>
-          <Box marginBottom={3}>
-            <Typography variant="h6" component="p" color="text.secondary">
-              World developers use our theFront theme to build their internal
-              tools and client admin applications.
-              <br />
-              Save yourself time and money.
+              {' '}Community
             </Typography>
           </Box>
           <Box
             display="flex"
             flexDirection={{ xs: 'column', sm: 'row' }}
             alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+            marginTop={15}
           >
             <Button
               variant="contained"
@@ -59,19 +60,8 @@ const Hero = () => {
               size="large"
               fullWidth={isMd ? false : true}
             >
-              Start now
+              Go to application
             </Button>
-            <Box
-              component={Button}
-              variant="outlined"
-              color="primary"
-              size="large"
-              marginTop={{ xs: 2, sm: 0 }}
-              marginLeft={{ sm: 2 }}
-              fullWidth={isMd ? false : true}
-            >
-              Learn more
-            </Box>
           </Box>
         </Box>
       </Grid>

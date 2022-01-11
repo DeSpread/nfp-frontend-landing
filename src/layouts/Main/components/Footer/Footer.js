@@ -22,21 +22,15 @@ const Footer = () => {
         >
           <Box
             display={'flex'}
-            component="a"
-            href="/"
-            title="theFront"
-            width={80}
           >
-            <Box
-              component={'img'}
-              src={
-                mode === 'light'
-                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-              }
-              height={1}
-              width={1}
-            />
+            <Typography
+                align={'center'}
+                variant={'subtitle1'}
+                color="text.primary"
+                gutterBottom
+            >
+              &copy; 2022, NFP STUDIO. All rights reserved
+            </Typography>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1} marginRight={2}>
@@ -75,27 +69,6 @@ const Footer = () => {
             </Box>
           </Box>
         </Box>
-      </Grid>
-      <Grid item xs={12}>
-        <Typography
-          align={'center'}
-          variant={'subtitle2'}
-          color="text.secondary"
-          gutterBottom
-        >
-          &copy; theFront. 2021, Maccarian. All rights reserved
-        </Typography>
-        <Typography
-          align={'center'}
-          variant={'caption'}
-          color="text.secondary"
-          component={'p'}
-        >
-          When you visit or interact with our sites, services or tools, we or
-          our authorised service providers may use cookies for storing
-          information to help provide you with a better, faster and safer
-          experience and for marketing purposes.
-        </Typography>
       </Grid>
     </Grid>
   );

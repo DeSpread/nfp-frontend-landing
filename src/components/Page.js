@@ -25,12 +25,13 @@ export const useDarkMode = () => {
   };
 
   useEffect(() => {
-    try {
-      const localTheme = window.localStorage.getItem('themeMode');
-      localTheme ? setTheme(localTheme) : setMode('light');
-    } catch {
-      setMode('light');
-    }
+    setMode('light');
+    // try {
+    //   const localTheme = window.localStorage.getItem('themeMode');
+    //   localTheme ? setTheme(localTheme) : setMode('light');
+    // } catch {
+    //   setMode('light');
+    // }
 
     setMountedComponent(true);
   }, []);

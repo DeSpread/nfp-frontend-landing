@@ -4,8 +4,10 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
+import Logo from './logo.svg'
 
 import { NavItem } from './components';
+import {Typography} from "@mui/material";
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
@@ -28,71 +30,22 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
     >
       <Box
         display={'flex'}
-        component="a"
+        alignItems="center"
+        justify="center"
         href="/"
-        title="theFront"
-        width={{ xs: 100, md: 120 }}
+        title="NFP STUDIO"
       >
         <Box
           component={'img'}
-          src={
-            mode === 'light' && !colorInvert
-              ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-          }
-          height={1}
-          width={1}
+          src={Logo}
+          height={42}
+          width={42}
         />
+        <Typography sx={{ fontWeight: 900 }} color={'text.primary'} marginLeft={1.5}>
+          NFP STUDIO
+        </Typography>
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box>
-          <NavItem
-            title={'Landings'}
-            id={'landing-pages'}
-            items={landingPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Company'}
-            id={'company-pages'}
-            items={companyPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Account'}
-            id={'account-pages'}
-            items={accountPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Pages'}
-            id={'secondary-pages'}
-            items={secondaryPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Blog'}
-            id={'blog-pages'}
-            items={blogPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Portfolio'}
-            id={'portfolio-pages'}
-            items={portfolioPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
         <Box marginLeft={4}>
           <Button
             variant="contained"
@@ -102,24 +55,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             href="https://mui.com/store/items/the-front-landing-page/"
             size="large"
           >
-            Buy now
+            App
           </Button>
         </Box>
-      </Box>
-      <Box sx={{ display: { xs: 'block', md: 'none' } }} alignItems={'center'}>
-        <Button
-          onClick={() => onSidebarOpen()}
-          aria-label="Menu"
-          variant={'outlined'}
-          sx={{
-            borderRadius: 2,
-            minWidth: 'auto',
-            padding: 1,
-            borderColor: alpha(theme.palette.divider, 0.2),
-          }}
-        >
-          <MenuIcon />
-        </Button>
       </Box>
     </Box>
   );
