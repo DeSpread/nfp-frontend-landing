@@ -29,7 +29,7 @@ const Footer = () => {
                 color="text.primary"
                 gutterBottom
             >
-              &copy; 2022, NFP STUDIO. All rights reserved
+              &copy; 2022, NFP STUDIO
             </Typography>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>

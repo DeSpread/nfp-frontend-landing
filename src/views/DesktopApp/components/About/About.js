@@ -72,7 +72,7 @@ const About = () => {
                     sx={{fontWeight: 500}}
                     align={'center'}
                 >
-                  For Stacks community
+                  Focus on community needs
                 </Typography>
               </Box>
             </Box>
