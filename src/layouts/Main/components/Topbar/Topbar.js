@@ -8,6 +8,7 @@ import Logo from './logo.svg'
 
 import { NavItem } from './components';
 import {Typography} from "@mui/material";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
@@ -53,8 +54,9 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             component="a"
             href="https://app.nfpstudio.io"
             size="large"
+            endIcon={<ArrowForwardIcon />}
           >
-            App
+            Dashboard
           </Button>
         </Box>
       </Box>

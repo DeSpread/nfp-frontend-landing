@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Typed from "react-typed";
 import PreviewImg from '../../../../images/preview.png';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const Hero = () => {
   const theme = useTheme();
@@ -33,12 +34,6 @@ const Hero = () => {
                 color={'primary'}
                 component={'span'}
                 variant={'inherit'}
-                sx={{
-                  background: `linear-gradient(180deg, transparent 82%, ${alpha(
-                    theme.palette.secondary.main,
-                    0.3,
-                  )} 0%)`,
-                }}
               >
                 <Typed
                     strings={['Stacks']}
@@ -62,8 +57,9 @@ const Hero = () => {
               href={"https://app.nfpstudio.io"}
               size="large"
               fullWidth={isMd ? false : true}
+              startIcon={<DashboardIcon />}
             >
-              Go to application
+              Dashboard
             </Button>
           </Box>
         </Box>
