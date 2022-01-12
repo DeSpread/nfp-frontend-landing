@@ -8,175 +8,116 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
+import List from "@mui/material/List";
+import {useTheme} from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const mock = [
   {
-    name: 'Clara Bertoletti',
-    title: 'Junior Designer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img1.jpg',
+    title: 'Built for developers',
+    subtitle:
+        'theFront is built to make your life easier. Variables, build tooling, documentation, and reusable components.',
+    icon: (
+        <svg
+            height={24}
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+        >
+          <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+          />
+        </svg>
+    ),
   },
   {
-    name: 'Jhon Anderson',
-    title: 'Senior Frontend Developer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img2.jpg',
+    title: 'Designed to be modern',
+    subtitle:
+        'Designed with the latest design trends in mind. theFront feels modern, minimal, and beautiful.',
+    icon: (
+        <svg
+            height={24}
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+        >
+          <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+          />
+        </svg>
+    ),
   },
   {
-    name: 'Chary Smith',
-    title: 'SEO at Comoti',
-    avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
-  },
-  {
-    name: 'Clara Bertoletti',
-    title: 'Junior Designer',
-    avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
+    title: 'Documentation for everything',
+    subtitle:
+        'We\'ve written extensive documentation for components and tools, so you never have to reverse engineer anything.',
+    icon: (
+        <svg
+            height={24}
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+        >
+          <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+          />
+        </svg>
+    ),
   },
 ];
 
 const Support = () => {
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
+
   return (
     <Box>
       <Box marginBottom={2}>
-        <Typography
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
-          }}
-          gutterBottom
-          color={'secondary'}
-          align={'center'}
-        >
-          Support Team
-        </Typography>
-        <Typography variant={'h4'} sx={{ fontWeight: 700 }} align={'center'}>
-          Our friendly support team will help you with anything
-        </Typography>
-        <Typography
-          variant="h6"
-          component="p"
-          color="text.secondary"
-          align={'center'}
-        >
-          We aim to take care of you. Need help with installation, find a bug,
-          or just need a clarifiction about our documentation?
-          <br />
-          We'll be there to lend a helping hand.
-        </Typography>
-        <Box marginTop={2} display={'flex'} justifyContent={'center'}>
-          <Button
-            color={'primary'}
-            variant={'contained'}
-            size={'large'}
-            startIcon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                width={20}
-                height={20}
+        <List disablePadding>
+          {mock.map((item, index) => (
+              <ListItem
+                  key={index}
+                  disableGutters
+                  data-aos="fade-up"
+                  data-aos-delay={index * 300}
+                  data-aos-offset={100}
+                  data-aos-duration={600}
               >
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-            }
-          >
-            Contact us
-          </Button>
-        </Box>
-      </Box>
-      <Box
-        marginBottom={4}
-        width={1}
-        display={'flex'}
-        justifyContent={'center'}
-      >
-        <Box
-          paddingBottom={{ xs: 1, md: 0 }}
-          display={'flex'}
-          overflow={'auto'}
-        >
-          {[
-            'All features',
-            'Email support',
-            'Google Ads',
-            'SSO via Google',
-            'API access',
-            'Facebook Ads',
-          ].map((item, i) => (
-            <Box
-              key={i}
-              display={'flex'}
-              alignItems={'center'}
-              flexDirection={'column'}
-              flex={'0 0 auto'}
-              marginX={2}
-            >
-              <Box
-                component={ListItem}
-                disableGutters
-                width={'auto'}
-                padding={0}
-              >
-                <Box
-                  component={ListItemAvatar}
-                  minWidth={'auto !important'}
-                  marginRight={2}
-                >
+                <ListItemAvatar>
                   <Box
-                    component={Avatar}
-                    bgcolor={'secondary.main'}
-                    width={20}
-                    height={20}
+                      component={Avatar}
+                      variant={'rounded'}
+                      color={theme.palette.primary.dark}
+                      bgcolor={`${theme.palette.primary.light}22`}
                   >
-                    <svg
-                      width={12}
-                      height={12}
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    {item.icon}
                   </Box>
-                </Box>
-                <ListItemText primary={item} />
-              </Box>
-            </Box>
-          ))}
-        </Box>
-      </Box>
-      <Grid container spacing={2}>
-        {mock.map((item, i) => (
-          <Grid item xs={6} md={3} key={i}>
-            <ListItem
-              disableGutters
-              data-aos={'fade-up'}
-              data-aos-delay={i * 100}
-              data-aos-offset={100}
-              data-aos-duration={600}
-              sx={{
-                display: 'flex',
-                flexDirection: { xs: 'column', sm: 'row' },
-                alignItems: { xs: 'flex-start', sm: 'center' },
-              }}
-            >
-              <ListItemAvatar>
-                <Box
-                  component={Avatar}
-                  width={{ xs: 80, sm: 80, md: 120 }}
-                  height={{ xs: 80, sm: 80, md: 120 }}
-                  src={item.avatar}
-                  marginRight={2}
+                </ListItemAvatar>
+                <ListItemText
+                    primary={item.title}
+                    secondary={item.subtitle}
                 />
-              </ListItemAvatar>
-              <ListItemText primary={item.name} secondary={item.title} />
-            </ListItem>
-          </Grid>
-        ))}
-      </Grid>
+              </ListItem>
+          ))}
+        </List>
+      </Box>
     </Box>
   );
 };

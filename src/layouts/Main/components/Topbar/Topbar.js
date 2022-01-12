@@ -41,7 +41,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
           height={42}
           width={42}
         />
-        <Typography sx={{ fontWeight: 900 }} color={'text.primary'} marginLeft={1.5}>
+        <Typography variant={'h6'} sx={{ fontWeight: 900 }} color={'text.primary'} marginLeft={1.5}>
           NFP STUDIO
         </Typography>
       </Box>
@@ -51,8 +51,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             variant="contained"
             color="primary"
             component="a"
-            target="blank"
-            href="https://mui.com/store/items/the-front-landing-page/"
+            href="https://nfpstudio.io/app"
             size="large"
           >
             App

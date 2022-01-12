@@ -1,18 +1,9 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
+import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Main from 'layouts/Main';
 import Container from 'components/Container';
-import {
-  Customization,
-  Download,
-  Hero,
-  Hub,
-  Partners,
-  Pricings,
-  Reviews,
-  Support,
-} from './components';
+import {About, Hero} from './components';
 
 const DesktopApp = () => {
   const theme = useTheme();
@@ -48,7 +39,7 @@ const DesktopApp = () => {
         </Box>
       </Box>
       <Container>
-        <Support />
+        <About />
       </Container>
     </Main>
   );

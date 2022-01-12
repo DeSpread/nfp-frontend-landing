@@ -2,9 +2,9 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import {useTheme} from '@mui/material/styles';
 
 const Footer = () => {
   const theme = useTheme();
@@ -33,38 +33,17 @@ const Footer = () => {
             </Typography>
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="/"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Home
-              </Link>
-            </Box>
-            <Box marginTop={1} marginRight={2}>
-              <Link
-                underline="none"
-                component="a"
-                href="/docs/introduction"
-                color="text.primary"
-                variant={'subtitle2'}
-              >
-                Documentation
-              </Link>
-            </Box>
             <Box marginTop={1}>
               <Button
                 variant="outlined"
-                color="primary"
+                endIcon={<TwitterIcon/>}
+                color="inherit"
                 component="a"
                 target="blank"
-                href="https://mui.com/store/items/the-front-landing-page/"
+                href="https://twitter.com/NFP2021"
                 size="small"
               >
-                Purchase now
+                Twiiter
               </Button>
             </Box>
           </Box>
