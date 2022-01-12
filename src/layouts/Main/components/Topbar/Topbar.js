@@ -51,7 +51,7 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
             variant="contained"
             color="primary"
             component="a"
-            href="https://nfpstudio.io/app"
+            href="https://app.nfpstudio.io"
             size="large"
           >
             App
