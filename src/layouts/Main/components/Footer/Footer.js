@@ -1,10 +1,10 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import {useTheme} from '@mui/material/styles';
+import Link from "@mui/material/Link";
 
 const Footer = () => {
   const theme = useTheme();
@@ -35,18 +35,9 @@ const Footer = () => {
           </Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1}>
-              <Button
-                variant="outlined"
-                endIcon={<TwitterIcon/>}
-                color="inherit"
-                sx={{fontWeight: 700}}
-                component="a"
-                target="blank"
-                href="https://twitter.com/NFP2021"
-                size="small"
-              >
-                Twiiter
-              </Button>
+              <Link color={"inherit"} underline="hover" href="https://twitter.com/NFP2021" target="_blank">
+                <TwitterIcon />
+              </Link>
             </Box>
           </Box>
         </Box>
