@@ -26,7 +26,7 @@ const Hero = () => {
               color="text.primary"
               sx={{ fontWeight: 700 }}
             >
-              Building Tool
+              Building Tools
               <br/>
               For {' '}
               <Typography

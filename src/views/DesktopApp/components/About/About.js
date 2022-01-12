@@ -36,7 +36,7 @@ const About = () => {
                 <Typography
                     variant={'h6'}
                     gutterBottom
-                    sx={{fontWeight: 500}}
+                    sx={{fontWeight: 900}}
                     align={'center'}
                 >
                   For Stacks community
@@ -69,7 +69,7 @@ const About = () => {
                 <Typography
                     variant={'h6'}
                     gutterBottom
-                    sx={{fontWeight: 500}}
+                    sx={{fontWeight: 900}}
                     align={'center'}
                 >
                   Focus on community needs
@@ -102,7 +102,7 @@ const About = () => {
                 <Typography
                     variant={'h6'}
                     gutterBottom
-                    sx={{fontWeight: 500}}
+                    sx={{fontWeight: 900}}
                     align={'center'}
                 >
                   Build tool

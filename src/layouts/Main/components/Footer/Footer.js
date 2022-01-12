@@ -26,6 +26,7 @@ const Footer = () => {
             <Typography
                 align={'center'}
                 variant={'subtitle1'}
+                sx={{fontWeight: 700}}
                 color="text.primary"
                 gutterBottom
             >
@@ -38,6 +39,7 @@ const Footer = () => {
                 variant="outlined"
                 endIcon={<TwitterIcon/>}
                 color="inherit"
+                sx={{fontWeight: 700}}
                 component="a"
                 target="blank"
                 href="https://twitter.com/NFP2021"
