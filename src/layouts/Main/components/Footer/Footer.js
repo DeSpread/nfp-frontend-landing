@@ -18,7 +18,7 @@ const Footer = () => {
           justifyContent={'space-between'}
           alignItems={'center'}
           width={1}
-          flexDirection={{ xs: 'column', sm: 'row' }}
+          flexDirection={{ xs: 'row', sm: 'row' }}
         >
           <Box
             display={'flex'}

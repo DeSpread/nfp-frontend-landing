@@ -6,7 +6,6 @@ import {useTheme} from '@mui/material/styles';
 import Logo from './logo.svg'
 import {Typography} from "@mui/material";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
   const theme = useTheme();
@@ -45,18 +44,6 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         </Typography>
       </Box>
       <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-        <Box >
-          <Button
-              variant="outlined"
-              endIcon={<TwitterIcon/>}
-              component="a"
-              target="blank"
-              href="https://twitter.com/NFP2021"
-              size="large"
-          >
-            Twitter
-          </Button>
-        </Box>
         <Box marginLeft={4}>
           <Button
             variant="contained"

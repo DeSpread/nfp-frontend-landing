@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid';
 import Typed from "react-typed";
 import PreviewImg from '../../../../images/preview.png';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Hero = () => {
   const theme = useTheme();
@@ -19,21 +20,24 @@ const Hero = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item container xs={12} md={6} alignItems={'center'}>
-        <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
-          <Box marginBottom={2}>
+      <Grid item container xs={12} md={6} alignItems={'center'} data-aos={isMd ? 'fade-right' : 'fade-up'}>
+        <Grid container spacing={4}>
+          <Grid item container xs={12} md={12} alignItems={'center'}>
             <Typography
-              variant="h3"
-              color="text.primary"
-              sx={{ fontWeight: 700 }}
+                variant="h2"
+                color="text.primary"
+                gutterBottom
+                sx={{
+                  fontWeight: 700,
+                }}
             >
               Building Tools
               <br/>
-              For {' '}
+              For{' '}
               <Typography
-                color={'primary'}
-                component={'span'}
-                variant={'inherit'}
+                  color={'primary'}
+                  component={'span'}
+                  variant={'inherit'}
               >
                 <Typed
                     strings={['Stacks']}
@@ -41,28 +45,44 @@ const Hero = () => {
                     loop={true}
                 />
               </Typography>
-              {' '}Community
+              <br/>
+              Community
             </Typography>
-          </Box>
-          <Box
-            display="flex"
-            flexDirection={{ xs: 'column', sm: 'row' }}
-            alignItems={{ xs: 'stretched', sm: 'flex-start' }}
-            marginTop={15}
-          >
+          </Grid>
+          <Grid item container xs={12} md={12} alignItems={'center'}>
             <Button
-              variant="contained"
-              color="primary"
-              component="a"
-              href={"https://app.nfpstudio.io"}
-              size="large"
-              fullWidth={isMd ? false : true}
-              startIcon={<DashboardIcon />}
+                variant="contained"
+                color="primary"
+                component="a"
+                href={"https://app.nfpstudio.io"}
+                size="large"
+                fullWidth={isMd ? false : true}
+                startIcon={<DashboardIcon/>}
             >
               Dashboard
             </Button>
-          </Box>
-        </Box>
+            <Box
+                marginTop={{xs: 2, sm: 0}}
+                marginLeft={{sm: 2}}
+                width={{xs: '100%', md: 'auto'}}
+            >
+              <Button
+                  component={'a'}
+                  href={'https://twitter.com/NFP2021'}
+                  target="blank"
+                  variant="outlined"
+                  color="primary"
+                  size="large"
+                  marginTop={{xs: 2, sm: 0}}
+                  marginLeft={{sm: 2}}
+                  fullWidth={isMd ? false : true}
+                  startIcon={<TwitterIcon/>}
+              >
+                Twitter
+              </Button>
+            </Box>
+          </Grid>
+        </Grid>
       </Grid>
       <Grid
         item
